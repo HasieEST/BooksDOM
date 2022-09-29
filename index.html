@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="Ayrton Mägipõld" name="autor">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Title</title>
+    <link
+            crossorigin="anonymous"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            rel="stylesheet"
+    />
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,700"
+            rel="stylesheet"
+            type="text/css"
+    />
+    <style>
+        ul{
+            list-style-type: none;
+        }
+        fieldset {
+            background-color: #eeeeee;
+        }
+
+        legend {
+            background-color: gray;
+            color: white;
+            padding: 5px 10px;
+        }
+
+        input {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<section class="container">
+    <div class="row">
+        <form class="col-12">
+            <fieldset>
+                <legend>Add Book</legend>
+                <div>
+                    <label for="title">Title</label>
+                    <br>
+                    <input id="title" name="title" type="text">
+                </div>
+                <div>
+                    <label for="author">Author</label>
+                    <br>
+                    <input id="author" name="author" type="text">
+                </div>
+                <div>
+                    <label for="isbn">ISBN#</label>
+                    <br>
+                    <input id="isbn" name="isbn" type="text">
+                </div>
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div class="container">
+        <h4>Books</h4>
+    </div>
+    <div class='container'>
+        <div class="row">
+            <div class="col-sm">
+                <ul class="list-group list-group-flush" id="listTitle">
+                    <li class="list-group-item"><span style="font-weight: bold">Title</span></li>
+                </ul>
+            </div>
+            <div class="col-sm">
+                <div class="col-sm">
+                    <ul class="list-group list-group-flush" id="listAuthor">
+                        <li class="list-group-item"><span style="font-weight: bold">Author</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="col-sm">
+                    <ul class="list-group list-group-flush" id="listISBN">
+                        <li class="list-group-item"><span style="font-weight: bold">ISBN</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="container">
+    <div class="row">
+        <hr>
+        <p class="col-sm-4">&copy; 2022 Ayrton-Mägipõld</p>
+    </div>
+</footer>
+</body>
+<script src="app.js"></script>
+</html>
