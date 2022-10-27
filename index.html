@@ -6,92 +6,49 @@
     <meta content="Ayrton Mägipõld" name="autor">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Title</title>
-    <link
-            crossorigin="anonymous"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-            rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.css">
     <link
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,700"
             rel="stylesheet"
             type="text/css"
     />
-    <style>
-        ul {
-            list-style-type: none;
-        }
-
-        fieldset {
-            background-color: #eeeeee;
-        }
-
-        legend {
-            background-color: gray;
-            color: white;
-            padding: 5px 10px;
-        }
-
-        input {
-            margin: 5px;
-        }
-    </style>
 </head>
 <body>
-<section class="container">
-    <div class="row">
-        <form class="col-12">
-            <fieldset>
-                <legend>Add Book</legend>
-                <div>
-                    <label for="title">Title</label>
-                    <br>
-                    <input id="title" name="title" type="text">
-                </div>
-                <div>
-                    <label for="author">Author</label>
-                    <br>
-                    <input id="author" name="author" type="text">
-                </div>
-                <div>
-                    <label for="isbn">ISBN</label>
-                    <br>
-                    <input id="isbn" name="isbn" type="text">
-                </div>
-                <div>
-                    <input type="submit" value="Submit">
-                </div>
-            </fieldset>
-        </form>
-    </div>
-    <div class="container">
-        <h4>Books</h4>
-    </div>
-    <div class='container'>
-        <table>
-            <thead>
-            <tr>
-                <th>Title</th>
-                <th>Autor</th>
-                <th>ISBN</th>
-            </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>Test</th>
-                    <th>Test</th>
-                    <th>Test</th>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</section>
-<footer class="container">
-    <div class="row">
-        <hr>
-        <p class="col-sm-4">&copy; 2022 Ayrton-Mägipõld</p>
-    </div>
-</footer>
+<div class="container mt-4">
+    <form id="book-form">
+        <legend>Add Book</legend>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <br>
+            <input id="title" name="title" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="author">Author</label>
+            <br>
+            <input id="author" name="author" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="isbn">ISBN</label>
+            <br>
+            <input id="isbn" name="isbn" class="form-control">
+        </div>
+        <div class="col-sm-4 mt-3">
+            <button type="submit" value="submit" class="btn btn-lg btn-info">Submit</button>
+        </div>
+    </form>
+    <table class="table table-striped mt-5">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Autor</th>
+            <th>ISBN</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody id="book-list">
+        </tbody>
+    </table>
+</div>
 </body>
 <script src="app.js"></script>
 </html>
